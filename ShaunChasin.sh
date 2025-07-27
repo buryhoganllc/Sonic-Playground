@@ -3,9 +3,9 @@
 # Intel Macs from Homebrew
 #path=/usr/local/Cellar/sendmidi
 # Apple Silicon Macs from Homebrew
-path=/opt/homebrew/bin/sendmidi
+#path=/opt/homebrew/bin/sendmidi
 # Binary installs
-#path=/usr/local/bin/sendmidi
+path=/usr/local/bin/sendmidi
 #
 cmd1="dev IAC Driver Bus 1 ch 5 cc 1 127" # fade out audio
 cmd2="dev IAC Driver Bus 1 ch 4 cc 3 127" # LED scene 1
