@@ -1,11 +1,12 @@
-ELECTRIC FOREST
-
-MIDI Map
-
-CH	Note/Control		Path			Name			Min		Max
-1	CC 1			01-Audio | Mixer	Track Volume	-60 dB		0 dB
-1	CC 1			Sampler 1		Track Volume	-60 dB		0 dB
-1	CC 2			02-Audio | Mixer	Track Volume	-60 dB		0 dB
+ELECTRIC FOREST<br/>
+<br/>
+MIDI Map<br/>
+<br/>
+| CHAN     | MSG      | TARGET           | PARAM        | MIN       | MAX      | 
+| :------- | :------- | :--------------  | :----------- | :-------- | :------- |
+| 1	   | CC 1     | 01-Audio - Mixer | Track Volume | -60 dB    | 0 dB |
+| 1	   | CC 1     |	Sampler 1        | Track Volume | -60 dB    | 0 dB |
+| 1	   | CC 2     | 02-Audio - Mixer | Track Volume | -60 dB    |0 dB |
 1 	CC 2			Sampler 2		Track Volume	-60 dB		0 dB
 1 	CC 3			03-Audio | Mixer	Track Volume	-60 dB		0 dB
 1 	CC 3			Sampler 3		Track Volume	-60 dB		0 dB
