@@ -1,13 +1,18 @@
-    # Repository Notes - [DATE]
+    # Meeting Notes - [DATE]
 
     ## Topic: [TOPIC]
 
-    ### Key Points:
-    - [ ] Point 1
-    - [ ] Point 2
-    - [ ] Point 3
+    ### Attending:
+    - [ ] Name
+    - [ ] Name
+    - [ ] Name
 
-    ### Details:
+    ### Agenda Items:
+    - [ ] Item 1
+    - [ ] Item 2
+    - [ ] Item 3
+
+    ### Minutes:
     [Elaborate on the topic and key points here.]
 
     ### Action Items:
