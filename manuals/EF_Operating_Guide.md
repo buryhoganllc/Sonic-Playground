@@ -85,13 +85,160 @@ Electric Forest is constructed to run autonomously, with manual intervention rar
 
 __Changing Ableton Behavior (song lists and volume states)__  
 
-To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand Power Manager event from the menu bar list by clicking the   icon.  
+To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand Power Manager event from the menu bar list by clicking the ![Power Manager macOS menu bar icon.](/images/PM_menuBar.png)   icon.  
+
+![Power Manager on-demand list from menu bar.](/images/PM_onDemand.png)  
+
  
-Selecting “Ableton-Max Martin” or “Ableton-Shaun Chasin” will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
+Selecting “_Ableton-Max Martin_” or “_Ableton-Shaun Chasin_” will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
-You may also change the surround output level on-demand by selecting either “Ableton-Volume Daytime Mode” (normal volume) or “Ableton-Volume Nighttime Mode” (dimmed output, approximately 10 dB lower.)  
+You may also change the surround output level on-demand by selecting either “_Ableton-Volume Daytime Mode_” (normal volume) or “_Ableton-Volume Nighttime Mode_” (dimmed output, approximately 10 dB lower.)  
 
+__Overriding Scheduled Events__  
 
+At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next programmed would occur (media days, special events, etc.) 
+To override scheduled events, open Power Manager from the Dock (the purple alarm clock icon) and un-check the appropriate event.  
 
+For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select “Ableton-Max Martin” from the On Demand list (see above).  
+Next, uncheck the “_Shaun Chasin – Hourly_” entry in the Power Manager event store:  
 
+![Power Manager event store list all scheduled events.](/images/PM_eventStore.png)  
 
+Make sure to restore normal behavior by re-checking any unchecked boxes when your event has concluded.  
+
+__Muting Electric Forest__  
+
+At times it may be necessary to mute the audio output of _Electric Forest_ without stopping the lighting behavior (media days, private events, etc.)  
+This mute state can be accomplished by shutting off the power to the loudspeaker distributors in the closet rack. Locate the “AUDIO POWER” Furman conditioner towards the bottom of the rack and turn it off.  
+This will mute the audio system, leaving the lighting and sensing systems still active. Restore the Furman to an ON state to “unmute” Electric Forest.  
+
+__Changing Tube Behavior__  
+
+_Electric Forest_ is designed to be adaptable and updatable. At times it may be desirable to change the audio content of the show, and/or the behavior (color) of the pixel components.  
+
+__Changing Audio Content__  
+
+_Electric Forest_ is designed as a sixteen (16) channel mono immersive audio environment with two (2) stereo mixes facing out into the main gallery area.  
+Audio content can be updated, but certain file preparation requirements must be met. Contact the interactive developer before making any changes to the Ableton file.  
+
+__Changing Lighting Intensity__  
+
+At times it may be necessary to change the lighting intensity of the Electric Forest as a whole – dimming the LED output for photo/video shoots, for example.  
+
+To accomplish this:  
+
+- Open Safari on the Mac Mini
+- Click the Advatek Controller 1 bookmark from the bookmark bar to open the web interface for pixel controller 1 (tubes 1 through 8)
+- Click the ADMINISTRATOR button
+- Once the control page has loaded, click Pixel Outputs
+- Locate the INTENSITY controls in the upper right corner.
+- You can manually enter a value between 0 (off) and 255 (full) or use the slider. An intensity of 30% has proved useful for video shoots.
+- Repeat these steps for controller 2 (tubes 9 through 16.) Locate the bookmark in the bookmark bar.
+- When your event is complete, be sure to __RESTORE__ the intensity to __FULL (100%)__ for both controllers.
+   
+__Changing Lighting Behavior (Cues)__  
+
+All tubes have a background (static) and foreground (active) color which creates the meter bridge effect for each scene.  
+These colors can be adjusted if desired for special events, but certain conditions must be adhered to. Make sure you read and understand the following steps before proceeding. If there is any doubt, contact the developer.  
+
+- Create a new Scene in the MadMapper file. Set your desired transition time and fade shape.
+- Navigate to the list of Tubes on the left and scroll down to select Tube 01.
+- Navigate to the right to the shaders/effects list and locate “Fill,” which corresponds to Tube 01. Use the map on the inside of the closet door to identify where Tube 01 is located in physical space. You will also notice a “Fill-1,” Fill-2,” etc. Each tube has a pixel effect assigned to it, which under normal conditions are all the same.
+     - The title of the effect is offset -1 for each tube, so Tube 02 is Fill-1; Tube 10 is Fill-9; Tube 16 is Fill-15, etc.
+- In the lower right area, you have the effects parameters for “Fill.” Locate the entries for Front Color and Back Color, which are represented by colored rectangles. Back Color is the static color that is always present. Front Color is the dynamic color that follows the peak level of the corresponding audio track. 
+- You can change either color setting by clicking the colored rectangle to reveal and change the hex code, by selecting one of the pre-defined colors, by using the color wheel, or by using the RGB value sliders.
+     - _Note: because of the semi-opaque nature of the plexiglass tubes, very deep saturated colors that do not use the white channel in the pixels tend not to look that great. High contrast, bright colors read better. You will notice this right away if you dial up a deep purple or forest green._
+- Once you have found your new colors, right click on “Fill” and select “Copy All Settings.”
+- Right click on “Fill-1” and select “Paste Settings.” 
+- Repeat these steps for the remaining “Fill-…” entries. Return to the Scenes/Cues list, right click on your newly created scene and select Update Scene. 
+- Enable Live mode to allow for single-click scene recall.
+
+## Troubleshooting  
+
+__Electric Forest sensors are not registering movement__  
+
+Conduct a full power cycle of the system:   
+- Quit MadMapper, Ableton and Max. DO NOT save if prompted. 
+- Shut down the Mac Mini.
+- Turn off PIXEL POWER Furman (red) and AUDIO POWER Furman (yellow).
+- Wait three (3) minutes
+- Restore PIXEL POWER Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
+- Restore AUDIO POWER Furman. Wait for a full boot of the Furman and for the line voltage to be displayed.
+- Wait for the pixel system switch (TP-Link) to fully boot.
+- Turn on the Mac Mini (power button located at rear right - reach through the right side of the rack to access it.)
+- Once fully booted to the desktop, launch the application components from their Desktop aliases. The aliases are named to reflect the order in which they are run:
+     - 1 - MAX
+     - 2 - ABLETON
+     - 3 - MADMAPPER
+- __Allow each application to fully boot before moving on to the next one.__
+- Lastly, begin playback in Ableton by running one of the Power Manager events (“_Ableton-Shaun Chasin_” for example) to begin audio playback and set the tube lighting into the correct configuration.
+
+__One or more loudspeakers do not appear to be working__  
+
+Use the tube map on the interior of the closet door to determine which channel number appears to be faulty.  
+Locate the corresponding Core8 speaker distributor for the loudspeaker. The physical rack layout is as follows:  
+- Core8 (3) - Channels 17 - 24
+- Core8 (2) - Channels 09 - 16
+- Core8 (1) - Channels 01 - 08
+ 
+- Look for a green link light and yellow PoE light on the face of the Core unit corresponding to the tube in question.
+- If the PoE light is not present, verify that the corresponding dip switch is in the ON position.
+- If the link light is not present, verify that the Cat6 cable is fully inserted at the loudspeaker and distributor.
+- If both lights are present but audio cannot be heard, you may check Dante Controller to verify that the subscription is valid or contact the developer for remote support.
+
+__Replacing System Components__  
+
+Refer to the connection diagrams for information on replacing cables, peripherals, etc. If you determine that an Electric Forest tube is damaged and needs to be replaced entirely, contact the developer.  
+It is recommended that the developer and a representative of Blackmouth Design be present the first time a tube is replaced in its entirety.
+
+# Appendix B – Event Automation  
+
+All scheduled events are handled via Power Manager. Event triggers execute shell script actions to send MIDI commands to various system components.  
+Repeated events – scripts that are run multiple times a day on a schedule, are created by means of AppleScript commands to Power Manager.  
+
+__Creating repeating events (example: hourly)__
+
+```applescript
+--	Power Manager repeated events.applescript
+--	Created by: BRENDAN HOGAN
+--	Created on: 7/23/25
+--
+--	Copyright © 2025 Bury, Hogan & Associates LLC, All Rights Reserved
+--
+
+use AppleScript version "2.4" -- Yosemite (10.10) or later
+use scripting additions
+
+tell application "Power Manager"
+	
+	-- Set inclusive start and end hours (24 hour notation)
+	set startingHour to 10 -- 10am
+	set endingHour to 18 -- 6pm
+	-- Set days of the week to trigger
+	set daysOfTheWeek to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+	
+	set secondsPerHour to (60 * 60)
+	
+	-- Create the event in the workshop 
+	tell workshop
+		
+		-- Create a new event
+		set myEvent to make new event with properties {name:"Hourly event"} -- modify the name as needed
+		
+		-- Create a new trigger for every hour of the day
+		repeat with i from 0 to 23
+			if i ≥ startingHour and i ≤ endingHour then
+				make new trigger daily with properties {seconds from midnight:i * secondsPerHour, days:daysOfTheWeek} at front of triggers of myEvent
+			end if
+		end repeat
+		
+	end tell
+	
+	-- Deploy the event
+	tell event store to store these events myEvent
+	
+	-- Clean up the workshop
+	empty workshop
+	
+end tell
+```
