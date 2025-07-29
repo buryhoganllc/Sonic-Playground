@@ -78,7 +78,20 @@ When troubleshooting a physical system issue, direct access is recommended.
 
 _Authentication_ – all admin accounts on the host machines use the following credentials:  
 - User: sp-admin
-- Pass: 2008  
+- Pass: 2008
+
+## Manual Intervention
+Electric Forest is constructed to run autonomously, with manual intervention rarely necessary. Should you need to quit Max, Ableton, and/or MadMapper, do so ___WITHOUT SAVING.___  
+
+__Changing Ableton Behavior (song lists and volume states)__  
+
+To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand Power Manager event from the menu bar list by clicking the   icon.  
+ 
+Selecting “Ableton-Max Martin” or “Ableton-Shaun Chasin” will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
+
+You may also change the surround output level on-demand by selecting either “Ableton-Volume Daytime Mode” (normal volume) or “Ableton-Volume Nighttime Mode” (dimmed output, approximately 10 dB lower.)  
+
+
 
 
 
