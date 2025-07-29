@@ -3,7 +3,7 @@ _It is recommended that this guide be read in its entirety before changes are ma
 ## Overview  
 __Component Files:__  
 
-Electric Forest utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
+_Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
 - Max: ~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat
 - Ableton: ~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/MultShow File/ElectricForest_v200_MultiShow_v2.als
@@ -12,7 +12,7 @@ Electric Forest utilizes Max, Ableton, and MadMapper show files to host the sens
 
 __Standard Behavior:__  
 
-Electric Forest runs 24/7 and requires limited user intervention. If necessary, show files may be launched manually via their Desktop aliases. The aliases are named to reflect the order in which they are to be run:
+_Electric Forest_ runs 24/7 and requires limited user intervention. If necessary, show files may be launched manually via their Desktop aliases. The aliases are named to reflect the order in which they are to be run:
 1. MAX
 2. ABLETON
 3. MADMAPPER    
@@ -28,11 +28,11 @@ If you need to quit either application for any reason, ___DO NOT SAVE___.
 
 __Startup & Shutdown:__  
 
-Electric Forest is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent attract/play mode. At present, there are NO automated power events on this system.  
+_Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent attract/play mode. At present, there are NO automated power events on this system.  
 
 __Scene Changes (Light and Sound cues):__  
 
-As of 7/22/25, Electric Forest is programmed to cycle between two music scenes:  
+As of 7/22/25, _Electric Forest_ is programmed to cycle between two music scenes:  
 1. “Movements” – Shaun Chasin’s original composition
 2. Max Martin mix (“Baby One More Time,” “Since You’ve Been Gone,” “Everybody”)
      
@@ -67,9 +67,9 @@ A corresponding “Daytime Mode” script is run at 10:30AM SUNDAY-FRIDAY (9:30A
 
 __Accessing the Host Machines:__  
 
-_Direct Access_ - The Electric Forest wireless keyboard/trackpad controller is kept atop the equipment rack in the “closet” next to Beat Nexus. The closet door is opened via the 007 key in Curatorial.  
+_Direct Access_ - The _Electric Forest_ wireless keyboard/trackpad controller is kept atop the equipment rack in the “closet” next to Beat Nexus. The closet door is opened via the 007 key in Curatorial.  
 
-_Remote Access_ – The Electric Forest Mac Mini is accessible via Jump Desktop. Jump Desktop is the ideal access method for manually triggering scene changes or volume states via the Power Manager menu bar list.  
+_Remote Access_ – The _Electric Forest_ Mac Mini is accessible via Jump Desktop. Jump Desktop is the ideal access method for manually triggering scene changes or volume states via the Power Manager menu bar list.  
 
 When troubleshooting a physical system issue, direct access is recommended.  
 
@@ -78,7 +78,7 @@ _Authentication_ – all admin accounts on the host machines use the following c
 - Pass: 2008
 
 ## Manual Intervention
-Electric Forest is constructed to run autonomously, with manual intervention rarely necessary. Should you need to quit Max, Ableton, and/or MadMapper, do so ___WITHOUT SAVING.___  
+_Electric Forest_ is constructed to run autonomously, with manual intervention rarely necessary. Should you need to quit Max, Ableton, and/or MadMapper, do so ___WITHOUT SAVING.___  
 
 __Changing Ableton Behavior (song lists and volume states)__  
 
@@ -107,7 +107,7 @@ __Muting Electric Forest__
 
 At times it may be necessary to mute the audio output of _Electric Forest_ without stopping the lighting behavior (media days, private events, etc.)  
 This mute state can be accomplished by shutting off the power to the loudspeaker distributors in the closet rack. Locate the “AUDIO POWER” Furman conditioner towards the bottom of the rack and turn it off.  
-This will mute the audio system, leaving the lighting and sensing systems still active. Restore the Furman to an ON state to “unmute” Electric Forest.  
+This will mute the audio system, leaving the lighting and sensing systems still active. Restore the Furman to an ON state to “unmute” _Electric Forest_.  
 
 __Changing Tube Behavior__  
 
@@ -120,7 +120,7 @@ Audio content can be updated, but certain file preparation requirements must be 
 
 __Changing Lighting Intensity__  
 
-At times it may be necessary to change the lighting intensity of the Electric Forest as a whole – dimming the LED output for photo/video shoots, for example.  
+At times it may be necessary to change the lighting intensity of the _Electric Forest_ as a whole – dimming the LED output for photo/video shoots, for example.  
 
 To accomplish this:  
 
@@ -185,12 +185,99 @@ Locate the corresponding Core8 speaker distributor for the loudspeaker. The phys
 
 __Replacing System Components__  
 
-Refer to the connection diagrams for information on replacing cables, peripherals, etc. If you determine that an Electric Forest tube is damaged and needs to be replaced entirely, contact the developer.  
+Refer to the connection diagrams for information on replacing cables, peripherals, etc. If you determine that an _Electric Forest_ tube is damaged and needs to be replaced entirely, contact the developer.  
 It is recommended that the developer and a representative of Blackmouth Design be present the first time a tube is replaced in its entirety.
 
 # Appendix A - MIDI Event Messaging
 
-Coming Soon...
+The scheduled and on-demand events in _Electric Forest_ – scene changes, volume changes, etc. – are achieved by passing MIDI commands to Ableton and MadMapper via a command line utility.  
+
+Tube sensor input – the MIDI data stream that sets an individual track/tube fader position in response to visitor input – is also mapped to Ableton properties.  
+
+The event list is as follows:
+
+__Track volume control (Ableton)__
+
+| Chan | Message    | Path              | Name         | Min    | Max  |
+| ---- | ---------- | ----------------- | -------------| ------ | ---- |
+| 01   | CC 01      | 01-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 01      | Sampler 1         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 02      | 02-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 02      | Sampler 2         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 03      | 03-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 03      | Sampler 3         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 04      | 04-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 04      | Sampler 4         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 05      | 05-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 05      | Sampler 5         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 06      | 06-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 06      | Sampler 6         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 07      | 07-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 07      | Sampler 7         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 08      | 08-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 08      | Sampler 8         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 09      | 09-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 09      | Sampler 9         | Track Volume | -60 dB | 0 dB |
+| 01   | CC 10      | 10-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 10      | Sampler 10        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 11      | 11-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 11      | Sampler 11        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 12      | 12-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 12      | Sampler 12        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 13      | 13-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 13      | Sampler 13        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 14      | 14-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 14      | Sampler 14        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 15      | 15-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 15      | Sampler 15        | Track Volume | -60 dB | 0 dB |
+| 01   | CC 16      | 16-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
+| 01   | CC 16      | Sampler 16        | Track Volume | -60 dB | 0 dB |
+
+__Lighting Control (MadMapper)__
+
+| Chan | Message    | Path              | Name                | Min    | Max  |
+| ---- | ---------- | ----------------- | --------------------| ------ | ---- |
+| 02   | CC 01      | IAC Driver Bus 1  | Tube 01 color width |        |      |
+| 02   | CC 02      | IAC Driver Bus 1  | Tube 02 color width |        |      |
+| 02   | CC 03      | IAC Driver Bus 1  | Tube 03 color width |        |      |
+| 02   | CC 04      | IAC Driver Bus 1  | Tube 04 color width |        |      |
+| 02   | CC 05      | IAC Driver Bus 1  | Tube 05 color width |        |      |
+| 02   | CC 06      | IAC Driver Bus 1  | Tube 06 color width |        |      |
+| 02   | CC 07      | IAC Driver Bus 1  | Tube 07 color width |        |      |
+| 02   | CC 08      | IAC Driver Bus 1  | Tube 08 color width |        |      |
+| 02   | CC 09      | IAC Driver Bus 1  | Tube 09 color width |        |      |
+| 02   | CC 10      | IAC Driver Bus 1  | Tube 10 color width |        |      |
+| 02   | CC 11      | IAC Driver Bus 1  | Tube 11 color width |        |      |
+| 02   | CC 12      | IAC Driver Bus 1  | Tube 12 color width |        |      |
+| 02   | CC 13      | IAC Driver Bus 1  | Tube 13 color width |        |      |
+| 02   | CC 14      | IAC Driver Bus 1  | Tube 14 color width |        |      |
+| 02   | CC 15      | IAC Driver Bus 1  | Tube 15 color width |        |      |
+| 02   | CC 16      | IAC Driver Bus 1  | Tube 16 color width |        |      |
+
+
+__Transport/Output Control (Ableton)__
+
+| Chan | Message    | Path              | Name                | Min    | Max     |
+| ---- | ---------- | ----------------- | --------------------| ------ | ------- |
+| 03   | CC 01      | Transport         | Start               |        |         |
+| 03   | CC 02      | Transport         | Stop                |        |         |
+| 03   | CC 20      | A-North \| Mixer  | Track Volume        | -40 dB | -2.5 dB |
+| 03   | CC 20      | B-South \| Mixer  | Track Volume        | -40 dB | -2.5 dB |
+
+__Cue Control (MadMapper)__
+
+| Chan | Message    | Path              | Name                | Min    | Max     |
+| ---- | ---------- | ----------------- | --------------------| ------ | ------- |
+| 04   | CC 03      | IAC Driver Bus 1  | Scene 01 (Chasin)   |        |         |
+| 04   | CC 04      | IAC Driver Bus 1  | Scene 02 (Martin)   |        |         |
+
+__Scene Control (Ableton)__
+
+| Chan | Message    | Path              | Name                | Min    | Max     |
+| ---- | ---------- | ----------------- | --------------------| ------ | ------- |
+| 05   | CC 01      | IAC Driver Bus 1  | Scene 1 (Fade Out)  |        |         |
+| 05   | CC 03      | IAC Driver Bus 1  | Scene 3 (Chasin)    |        |         |
+| 05   | CC 04      | IAC Driver Bus 1  | Scene 4 (Martin)    |        |         |
 
 # Appendix B – Event Automation  
 
