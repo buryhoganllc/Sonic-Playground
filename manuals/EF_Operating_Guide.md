@@ -1,8 +1,4 @@
-# Electric Forest Operating Guide
-## Version: 1.4
-### Updated: 7/25/25
-##### Prepared by Bury, Hogan & Associates for *The GRAMMY Museum*
----
+# Electric Forest Operating Guide - Version 1.4 (7/25/2025)
 _It is recommended that this guide be read in its entirety before changes are made to the Electric Forest_    
 ## Overview  
 __Component Files:__  
