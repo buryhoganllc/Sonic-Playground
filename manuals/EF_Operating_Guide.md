@@ -27,6 +27,7 @@ __Version Control:__
 
 ___NEVER___ save if prompted. All show files, in particular Ableton and MadMapper, receive a constant stream of control information when in operation. Those data streams are interpreted as unsaved changes from the default configuration of both applications.   
 If you need to quit either application for any reason, ___DO NOT SAVE___.  
+
 ## Automation
 
 __Startup & Shutdown:__  
@@ -153,7 +154,7 @@ These colors can be adjusted if desired for special events, but certain conditio
 - Repeat these steps for the remaining “Fill-…” entries. Return to the Scenes/Cues list, right click on your newly created scene and select Update Scene. 
 - Enable Live mode to allow for single-click scene recall.
 
-## Troubleshooting  
+## Troubleshooting
 
 __Electric Forest sensors are not registering movement__  
 
@@ -190,6 +191,10 @@ __Replacing System Components__
 
 Refer to the connection diagrams for information on replacing cables, peripherals, etc. If you determine that an Electric Forest tube is damaged and needs to be replaced entirely, contact the developer.  
 It is recommended that the developer and a representative of Blackmouth Design be present the first time a tube is replaced in its entirety.
+
+# Appendix A - MIDI Event Messaging
+
+Coming Soon...
 
 # Appendix B – Event Automation  
 
@@ -242,3 +247,93 @@ tell application "Power Manager"
 	
 end tell
 ```
+
+__Creating repeating events with minute offsets (example: XX:45)__ 
+```applescript
+--	Power Manager repeated events with offset.applescript
+--	Created by: BRENDAN HOGAN
+--	Created on: 7/23/25
+--
+--	Copyright © 2025 Bury, Hogan & Associates LLC, All Rights Reserved
+--
+
+use AppleScript version "2.4" -- Yosemite (10.10) or later
+use scripting additions
+
+tell application "Power Manager"
+	
+	-- Set inclusive start and end hours (24 hour notation)
+	set startingHour to 10 -- 10am
+	set endingHour to 18 -- 6pm
+	
+	-- Set days of the week to trigger
+	set daysOfTheWeek to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
+	
+	set secondsPerHour to (60 * 60)
+	set minutesOffset to 45 -- adjust this to change the offset in minutes (e.g., 15 for 15 minutes)
+	set secondsOffset to minutesOffset * 60
+	
+	-- Create the event in the workshop 
+	tell workshop
+		
+		-- Create a new event
+		set myEvent to make new event with properties {name:"Hourly event with minute offset"}
+		
+		-- Create a new trigger for every hour within the range, offset by 45 minutes
+		repeat with i from 0 to 23
+			if i ≥ startingHour and i ≤ endingHour then
+				set triggerTime to (i * secondsPerHour) + secondsOffset
+				make new trigger daily with properties {seconds from midnight:triggerTime, days:daysOfTheWeek} at front of triggers of myEvent
+			end if
+		end repeat
+		
+	end tell
+	
+	-- Deploy the event
+	tell event store to store these events myEvent
+	
+	-- Clean up the workshop
+	empty workshop
+	
+end tell
+```
+__Creating MIDI events via shell scripting (example: Shaun Chasin mix)__  
+
+Scheduled events such as Ableton scene changes execute shell scripts, such as the following example:  
+```bash
+#!/bin/bash
+# Example of multi-command MIDI script
+# Run Shaun Chasin "Movements" mix and set lights
+# Uncomment the correct path to your sendmidi install location:
+# Intel Macs from Homebrew
+#path=/usr/local/Cellar/sendmidi
+# Apple Silicon Macs from Homebrew
+#path=/opt/homebrew/bin/sendmidi
+# Binary installs
+path=/usr/local/bin/sendmidi
+#
+cmd1="dev IAC Driver Bus 1 ch 5 cc 1 127" # fade out audio
+cmd2="dev IAC Driver Bus 1 ch 4 cc 3 127" # LED scene 1
+cmd3="dev IAC Driver Bus 1 ch 5 cc 3 127" # Shaun Chasin mix
+cmd4="dev IAC Driver Bus 1 ch 3 cc 2 127" # stop transport
+#
+midiEvent1="$path $cmd1"
+midiEvent2="$path $cmd2"
+midiEvent3="$path $cmd3"
+midiEvent4="$path $cmd4"
+#
+eval "$midiEvent1"
+eval "$midiEvent2"
+sleep 6
+eval "$midiEvent4"
+sleep 0.1
+eval "$midiEvent4"
+sleep 0.4
+eval "$midiEvent3"
+exit 0;
+```
+
+The shell scripts tell the command line utility to call the MIDI device “IAC Driver Bus 1” and pass messages with defined channels, message types, byte 1 values, and byte 2 values.  
+These strings correspond to mapped parameters in Ableton and MadMapper.  
+
+_Note_: the Mac Mini running _Electric Forest_ utilizes a binary install of the command line utility.  
