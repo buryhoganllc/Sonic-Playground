@@ -20,7 +20,6 @@ jobs:
   copy-md:
     runs-on: ubuntu-latest
     steps:
-
       # 1. Check out the repository
       - name: Checkout code
         uses: actions/checkout@v3
@@ -31,7 +30,7 @@ jobs:
           mkdir -p "${{ github.event.inputs.destination_path }}"
 
       # 3. Copy the Markdown content
-            - name: Copy Markdown file
+      - name: Copy Markdown file
         run: |
           cp "${{ github.event.inputs.source_file }}" "${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}"
 
@@ -40,9 +39,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "${{ github.event.inputs.destination_path }}/"\
-"${{ github.event.inputs.destination_file }}"
+          git add "${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}"
           git diff --cached --exit-code || \
-            (git commit -m "Copy ${{ github.event.inputs.source_file }} to "\
-"${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}" \
-             && git push)
+            (git commit -m "Copy ${{ github.event.inputs.source_file }} to ${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}" && git push)
