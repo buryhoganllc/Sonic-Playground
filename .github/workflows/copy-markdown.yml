@@ -1,4 +1,4 @@
-name: Meeting Notes Template
+name: Copy Markdown Content
 
 on:
   workflow_dispatch:
