@@ -4,7 +4,7 @@ _It is recommended that this guide be read in its entirety before changes are ma
 
 ## Overview  
 
-#### Component Files:  
+### Component Files  
 
 _Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
@@ -13,7 +13,7 @@ _Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the se
 - MadMapper: ~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/ElectricForest_MultiShow.mad
 - Automation scripts: ~/Desktop/ELECTRIC FOREST SHOW FILES/Automation (See Appendix B)
 
-#### Standard Behavior:  
+### Standard Behavior  
 
 _Electric Forest_ runs 24/7 and requires limited user intervention. If necessary, show files may be launched manually via their Desktop aliases. The aliases are named to reflect the order in which they are to be run:
 
@@ -23,18 +23,18 @@ _Electric Forest_ runs 24/7 and requires limited user intervention. If necessary
 
 Allow each application to fully load before launching the next file. Once that is complete, hide Max and MadMapper, then select the desired Ableton scene from the Power Manager menu bar list (see Scene Changes below.)  
 
-#### Version Control:  
+### Version Control  
 
 ___NEVER___ save if prompted. All show files, in particular Ableton and MadMapper, receive a constant stream of control information when in operation. Those data streams are interpreted as unsaved changes from the default configuration of both applications.
 If you need to quit either application for any reason, ___DO NOT SAVE___.  
 
 ## Automation
 
-#### Startup & Shutdown:  
+### Startup & Shutdown
 
 _Electric Forest_ is hosted on an M2 Pro Mac Mini and runs 24/7 in a permanent attract/play mode. At present, there are NO automated power events on this system.  
 
-#### Scene Changes (Light and Sound cues):  
+### Scene Changes (Light and Sound cues)  
 
 As of 7/22/25, _Electric Forest_ is programmed to cycle between two music scenes:  
 
@@ -65,13 +65,13 @@ When a scene event is triggered, the current playing audio fades out to silence 
 The cued scene music will then begin playing. Audio is effectively continuous throughout the day. MadMapper will advance tube lighting scenes in synchronicity with Ableton, changing foreground and background colors.  
 Manual scene changes are achieved via the Power Manager menu bar icon by selecting the appropriate “On Demand” event, such as “Ableton-Shaun Chasin.” See Appendix B for more information.  
 
-#### Volume Control:  
+### Volume Control  
 
 Power Manager runs a “Nighttime Mode” script at 5:30PM SUNDAY-FRIDAY (6:30PM SATURDAY) to dim the output volume of the North and South surround speaker pairs by approximately 10dB. The individual tube speakers are unaffected.
 
 A corresponding “Daytime Mode” script is run at 10:30AM SUNDAY-FRIDAY (9:30AM SATURDAY), to restore the North/South output levels to their default fader position (normal volume).  
 
-#### Accessing the Host Machines:  
+### Accessing the Host Machines  
 
 _Direct Access_ - The _Electric Forest_ wireless keyboard/trackpad controller is kept atop the equipment rack in the “closet” next to Beat Nexus. The closet door is opened via the 007 key in Curatorial.  
 
@@ -88,7 +88,7 @@ _Authentication_ – all admin accounts on the host machines use the following c
 
 _Electric Forest_ is constructed to run autonomously, with manual intervention rarely necessary. Should you need to quit Max, Ableton, and/or MadMapper, do so ___WITHOUT SAVING.___  
 
-#### Changing Ableton Behavior (song lists and volume states)  
+### Changing Ableton Behavior (song lists and volume states)  
 
 To change between the Shaun Chasin and Max Martin music sets on-demand, select the appropriate On Demand Power Manager event from the menu bar list by clicking the ![Power Manager macOS menu bar icon.](/images/PM_menuBar.png)   icon.  
 
@@ -98,7 +98,7 @@ Selecting “_Ableton-Max Martin_” or “_Ableton-Shaun Chasin_” will fade o
 
 You may also change the surround output level on-demand by selecting either “_Ableton-Volume Daytime Mode_” (normal volume) or “_Ableton-Volume Nighttime Mode_” (dimmed output, approximately 10 dB lower.)  
 
-#### Overriding Scheduled Events  
+### Overriding Scheduled Events  
 
 At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next programmed would occur (media days, special events, etc.)
 To override scheduled events, open Power Manager from the Dock (the purple alarm clock icon) and un-check the appropriate event.  
@@ -110,22 +110,22 @@ Next, uncheck the “_Shaun Chasin – Hourly_” entry in the Power Manager eve
 
 Make sure to restore normal behavior by re-checking any unchecked boxes when your event has concluded.  
 
-#### Muting Electric Forest  
+### Muting Electric Forest  
 
 At times it may be necessary to mute the audio output of _Electric Forest_ without stopping the lighting behavior (media days, private events, etc.)  
 This mute state can be accomplished by shutting off the power to the loudspeaker distributors in the closet rack. Locate the “AUDIO POWER” Furman conditioner towards the bottom of the rack and turn it off.  
 This will mute the audio system, leaving the lighting and sensing systems still active. Restore the Furman to an ON state to “unmute” _Electric Forest_.  
 
-#### Changing Tube Behavior  
+## Changing Tube Behavior  
 
 _Electric Forest_ is designed to be adaptable and updatable. At times it may be desirable to change the audio content of the show, and/or the behavior (color) of the pixel components.  
 
-#### Changing Audio Content  
+### Changing Audio Content  
 
 _Electric Forest_ is designed as a sixteen (16) channel mono immersive audio environment with two (2) stereo mixes facing out into the main gallery area.  
 Audio content can be updated, but certain file preparation requirements must be met. Contact the interactive developer before making any changes to the Ableton file.  
 
-#### Changing Lighting Intensity  
+### Changing Lighting Intensity  
 
 At times it may be necessary to change the lighting intensity of the _Electric Forest_ as a whole – dimming the LED output for photo/video shoots, for example.  
 
@@ -140,7 +140,7 @@ To accomplish this:
 - Repeat these steps for controller 2 (tubes 9 through 16.) Locate the bookmark in the bookmark bar.
 - When your event is complete, be sure to __RESTORE__ the intensity to __FULL (100%)__ for both controllers.
 
-#### Changing Lighting Behavior (Cues)  
+### Changing Lighting Behavior (Cues)  
 
 All tubes have a background (static) and foreground (active) color which creates the meter bridge effect for each scene.  
 These colors can be adjusted if desired for special events, but certain conditions must be adhered to. Make sure you read and understand the following steps before proceeding. If there is any doubt, contact the developer.  
@@ -159,7 +159,7 @@ These colors can be adjusted if desired for special events, but certain conditio
 
 ## Troubleshooting
 
-#### Electric Forest sensors are not registering movement  
+### Electric Forest sensors are not registering movement
 
 Conduct a full power cycle of the system:
 
@@ -178,7 +178,7 @@ Conduct a full power cycle of the system:
 - __Allow each application to fully boot before moving on to the next one.__
 - Lastly, begin playback in Ableton by running one of the Power Manager events (“_Ableton-Shaun Chasin_” for example) to begin audio playback and set the tube lighting into the correct configuration.
 
-##### One or more loudspeakers do not appear to be working  
+### One or more loudspeakers do not appear to be working  
 
 Use the tube map on the interior of the closet door to determine which channel number appears to be faulty.  
 Locate the corresponding Core8 speaker distributor for the loudspeaker. The physical rack layout is as follows:  
@@ -192,12 +192,12 @@ Locate the corresponding Core8 speaker distributor for the loudspeaker. The phys
 - If the link light is not present, verify that the Cat6 cable is fully inserted at the loudspeaker and distributor.
 - If both lights are present but audio cannot be heard, you may check Dante Controller to verify that the subscription is valid or contact the developer for remote support.
 
-#### Replacing System Components  
+### Replacing System Components  
 
 Refer to the connection diagrams for information on replacing cables, peripherals, etc. If you determine that an _Electric Forest_ tube is damaged and needs to be replaced entirely, contact the developer.  
 It is recommended that the developer and a representative of Blackmouth Design be present the first time a tube is replaced in its entirety.
 
-# Appendix A - MIDI Event Messaging
+## Appendix A - MIDI Event Messaging
 
 The scheduled and on-demand events in _Electric Forest_ – scene changes, volume changes, etc. – are achieved by passing MIDI commands to Ableton and MadMapper via a command line utility.  
 
@@ -205,7 +205,7 @@ Tube sensor input – the MIDI data stream that sets an individual track/tube fa
 
 The event list is as follows:
 
-#### Track volume control (Ableton)
+### Track volume control (Ableton)
 
 | Chan | Message    | Path              | Name         | Min    | Max  |
 | ---- | ---------- | ----------------- | -------------| ------ | ---- |
@@ -242,7 +242,7 @@ The event list is as follows:
 | 01   | CC 16      | 16-Audio \| Mixer | Track Volume | -60 dB | 0 dB |
 | 01   | CC 16      | Sampler 16        | Track Volume | -60 dB | 0 dB |
 
-#### Lighting Control (MadMapper)
+### Lighting Control (MadMapper)
 
 | Chan | Message    | Path              | Name                | Min    | Max  |
 | ---- | ---------- | ----------------- | --------------------| ------ | ---- |
@@ -263,7 +263,7 @@ The event list is as follows:
 | 02   | CC 15      | IAC Driver Bus 1  | Tube 15 color width |        |      |
 | 02   | CC 16      | IAC Driver Bus 1  | Tube 16 color width |        |      |
 
-#### Transport/Output Control (Ableton)
+### Transport/Output Control (Ableton)
 
 | Chan | Message    | Path              | Name                | Min    | Max     |
 | ---- | ---------- | ----------------- | --------------------| ------ | ------- |
@@ -272,14 +272,14 @@ The event list is as follows:
 | 03   | CC 20      | A-North \| Mixer  | Track Volume        | -40 dB | -2.5 dB |
 | 03   | CC 20      | B-South \| Mixer  | Track Volume        | -40 dB | -2.5 dB |
 
-#### Cue Control (MadMapper)
+### Cue Control (MadMapper)
 
 | Chan | Message    | Path              | Name                | Min    | Max     |
 | ---- | ---------- | ----------------- | --------------------| ------ | ------- |
 | 04   | CC 03      | IAC Driver Bus 1  | Scene 01 (Chasin)   |        |         |
 | 04   | CC 04      | IAC Driver Bus 1  | Scene 02 (Martin)   |        |         |
 
-#### Scene Control (Ableton)
+### Scene Control (Ableton)
 
 | Chan | Message    | Path              | Name                | Min    | Max     |
 | ---- | ---------- | ----------------- | --------------------| ------ | ------- |
@@ -287,12 +287,12 @@ The event list is as follows:
 | 05   | CC 03      | IAC Driver Bus 1  | Scene 3 (Chasin)    |        |         |
 | 05   | CC 04      | IAC Driver Bus 1  | Scene 4 (Martin)    |        |         |
 
-# Appendix B – Event Automation  
+## Appendix B – Event Automation  
 
 All scheduled events are handled via Power Manager. Event triggers execute shell script actions to send MIDI commands to various system components.  
 Repeated events – scripts that are run multiple times a day on a schedule, are created by means of AppleScript commands to Power Manager.  
 
-#### Creating repeating events (example: hourly)
+### Creating repeating events (example: hourly)
 
 ```applescript
 -- Power Manager repeated events.applescript
@@ -339,7 +339,7 @@ tell application "Power Manager"
 end tell
 ```
 
-#### Creating repeating events with minute offsets (example: XX:45)
+### Creating repeating events with minute offsets (example: XX:45)
 
 ```applescript
 -- Power Manager repeated events with offset.applescript
@@ -390,7 +390,7 @@ tell application "Power Manager"
 end tell
 ```
 
-#### Creating MIDI events via shell scripting (example: Shaun Chasin mix)  
+### Creating MIDI events via shell scripting (example: Shaun Chasin mix)  
 
 Scheduled events such as Ableton scene changes execute shell scripts, such as the following example:  
 
