@@ -4,9 +4,7 @@
 
 ---
 
-### Electric Forest Colors
-
-#### Movements
+### Movements
 
 Background:
 
@@ -16,7 +14,7 @@ Foreground:
 
 - ![#ed5671](https://placehold.co/32x32/ed5671/ed5671.png) `#ed5671`
 
-#### Max Martin
+### Max Martin
 
 Background:
 
