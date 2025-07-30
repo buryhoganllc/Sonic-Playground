@@ -8,8 +8,8 @@ It is recommended that you read the entirety of this operating guide before maki
 
 ### Machine Operating Hours
 
-Intuiface experiences (_Film & TV_, _Video Games_, _Voice Acting_) all run on Intel NUC 13 Pro hosts running Windows 11.   
-The host machines will start up automatically at 06:00 hours daily and shut down automatically at 01:00 hours daily.   
+Intuiface experiences (_Film & TV_, _Video Games_, _Voice Acting_) all run on Intel NUC 13 Pro hosts running Windows 11.
+The host machines will start up automatically at 06:00 hours daily and shut down automatically at 01:00 hours daily.
 Host machines can be manually shut down at any time via direct access or remote access (see next section).
 
 ### Additional Actions
@@ -24,9 +24,9 @@ Intuiface will run automatically on each Windows host machine. Manual applicatio
 
 #### Direct Access
 
-Each host machine has a dedicated Logitech wireless keyboard/trackpad controller. All controllers are labeled with their corresponding experience/interactive name. Intuiface system controllers are kept in Curatorial.    
-Physical access to the host machines may be achieved by carefully unscrewing the Corian cover (_Film & TV_, _Video Games_)  
-taking care to support the weight of the cover until all screws are removed. This is best undertaken by two people.  
+Each host machine has a dedicated Logitech wireless keyboard/trackpad controller. All controllers are labeled with their corresponding experience/interactive name. Intuiface system controllers are kept in Curatorial.
+
+Physical access to the host machines may be achieved by carefully unscrewing the Corian cover (_Film & TV_, _Video Games_) taking care to support the weight of the cover until all screws are removed. This is best undertaken by two people.  
 
 Use the 800 key kept in Curatorial to unlock the Voice Acting cabinet.
 
@@ -39,6 +39,7 @@ When troubleshooting a physical system issue, direct access is recommended.
 ### Authentication
 
 All admin accounts on the host machines use the following credentials:  
+
 - User: sp-admin
 - Pass: 2008
 
@@ -53,10 +54,10 @@ It is unlikely that you will ever need to enter these credentials.
 
 #### Intuiface Restart and Reboot - Web Access
 
-You may restart Intuiface Player or reboot the PC manually from the Intuiface web management console.   
+You may restart Intuiface Player or reboot the PC manually from the Intuiface web management console.
 This is a useful means of interfacing with the host PCs when you only wish to start clean and do not need to perform additional troubleshooting.
 
-- Access the management console at https://my.intuiface.com/login.aspx and login with your account credentials.
+- Access the management console at <https://my.intuiface.com/login.aspx> and login with your account credentials.
 - Select “Players” from the “Management” icon column.
 - Select the Player instance you wish to control (all relevant players are prefixed with “SonicPlayground-“ and the interactive title.)
 - Select the appropriate action:
@@ -65,23 +66,23 @@ This is a useful means of interfacing with the host PCs when you only wish to st
 
 ## Manual Intervention
 
-All experiences are constructed to run autonomously, with manual intervention rarely necessary. 
+All experiences are constructed to run autonomously, with manual intervention rarely necessary.
 
 ### Setting Extended Display Mode
 
-_Film & TV_, and _Video Games_ utilize extended display mode on their respective host machines.   
+_Film & TV_, and _Video Games_ utilize extended display mode on their respective host machines.
 If the secondary display surface (the Samsung television) does not automatically turn on at startup, you can place the system(s) into extended display mode manually:
 
 #### Via wireless keyboard/trackpad
 
-- Turn on the television manually via the power button under the lower right bezel, or via the remote control in Curatorial labeled “Samsung DU7200.” 
-- Locate the appropriate Logitech controller and press the function and F11 keys simultaneously (FN + F11). 
+- Turn on the television manually via the power button under the lower right bezel, or via the remote control in Curatorial labeled “Samsung DU7200.”
+- Locate the appropriate Logitech controller and press the function and F11 keys simultaneously (FN + F11).
 - This will cycle display modes, and you will see the Attract screen appear on the television.
 
 #### Via Jump Desktop
 
 - Turn on the television manually via the power button under the lower right bezel, or via the remote control in Curatorial labeled “Samsung DU7200.”
-- Connect to the appropriate exhibit machine (make sure your Display preferences in Jump are set to “Separate Windows.”
+- Connect to the appropriate exhibit machine (make sure your Display preferences in Jump are set to “Separate Windows.”)
   - Click the Remote menu, then Send Key.
   - Select F11 from the resulting list. Continue to send the command until the displays (your separate Jump windows) reflect the correct layout.
 
@@ -89,7 +90,7 @@ If the secondary display surface (the Samsung television) does not automatically
 
 ### Intuiface host does not turn on
 
-A manual power on may be required. Locate a short Phillips bit screwdriver and remove the ten (10) screws from the Corian housing.   
+A manual power on may be required. Locate a short Phillips bit screwdriver and remove the ten (10) screws from the Corian housing.
 
 _It is recommended that one person holds the lid while another removes the screws_.
 
