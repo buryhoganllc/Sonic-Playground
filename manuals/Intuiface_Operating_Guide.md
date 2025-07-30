@@ -1,4 +1,4 @@
-# Intuiface Systems Operating Guide - version 1.0.3, 07/01/2025
+# Intuiface Systems Operating Guide - 07/30/2025
 
 ## Sonic Playground - GRAMMY Museum
 
