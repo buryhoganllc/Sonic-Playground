@@ -1,5 +1,7 @@
 # Electric Forest Operating Guide - Version 1.4 (7/25/2025)
 
+## Sonic Playground - GRAMMY Museum
+
 _It is recommended that this guide be read in its entirety before changes are made to the Electric Forest_
 
 ## Overview  
