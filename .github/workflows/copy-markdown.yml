@@ -31,11 +31,9 @@ jobs:
           mkdir -p "${{ github.event.inputs.destination_path }}"
 
       # 3. Copy the Markdown content
-      - name: Copy Markdown file
+            - name: Copy Markdown file
         run: |
-          cp "${{ github.event.inputs.source_file }}" \
-             "${{ github.event.inputs.destination_path }}/"\
-"${{ github.event.inputs.destination_file }}"
+          cp "${{ github.event.inputs.source_file }}" "${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}"
 
       # 4. Commit and push the new file if there are changes
       - name: Commit and push changes
