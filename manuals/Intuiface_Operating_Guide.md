@@ -2,7 +2,7 @@
 
 ## Sonic Playground - GRAMMY Museum
 
-_It is recommended that you read the entirety of this operating guide before making changes to Intuiface Systems_
+It is recommended that you read the entirety of this operating guide before making changes to Intuiface systems.
 
 ## Automated Startup and Shutdown
 

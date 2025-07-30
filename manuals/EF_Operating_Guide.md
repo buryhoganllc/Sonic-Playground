@@ -2,7 +2,7 @@
 
 ## Sonic Playground - GRAMMY Museum
 
-_It is recommended that this guide be read in its entirety before changes are made to the Electric Forest_
+It is recommended that this guide be read in its entirety before changes are made to the _Electric Forest_.
 
 ## Overview  
 
