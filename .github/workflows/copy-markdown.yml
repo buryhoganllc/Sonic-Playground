@@ -6,15 +6,15 @@ on:
       source_file:
         description: 'Path to the source Markdown file (relative to repo root)'
         required: true
-        default: 'notes.md'
+        default: 'template/notes.md'
       destination_path:
         description: 'Directory to create the new file in (relative to repo root)'
         required: true
-        default: 'docs'
+        default: 'notes'
       destination_file:
         description: 'New Markdown file name (including .md)'
         required: true
-        default: 'COPY.md'
+        default: 'meeting-notes.md'
 
 jobs:
   copy-md:
