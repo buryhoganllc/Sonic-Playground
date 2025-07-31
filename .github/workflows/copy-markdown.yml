@@ -6,7 +6,7 @@ on:
       source_file:
         description: 'Path to the source Markdown file (relative to repo root)'
         required: true
-        default: 'README.md'
+        default: 'notes.md'
       destination_path:
         description: 'Directory to create the new file in (relative to repo root)'
         required: true
