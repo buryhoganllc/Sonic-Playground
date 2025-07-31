@@ -6,20 +6,12 @@
 
 ### Movements
 
-Background:
+- ![#2913e1](https://placehold.co/32x32/2913e1/2913e1.png) `#2913e1 - Background`
 
-- ![#2913e1](https://placehold.co/32x32/2913e1/2913e1.png) `#2913e1`
-
-Foreground:
-
-- ![#ed5671](https://placehold.co/32x32/ed5671/ed5671.png) `#ed5671`
+- ![#ed5671](https://placehold.co/32x32/ed5671/ed5671.png) `#ed5671 - Foreground`
 
 ### Max Martin
 
-Background:
+- ![#ea5670](https://placehold.co/32x32/ea5670/ea5670.png) `#ea5670 - Background`
 
-- ![#ea5670](https://placehold.co/32x32/ea5670/ea5670.png) `#ea5670`
-
-Foreground:
-
-- ![#fbd208](https://placehold.co/32x32/fbd208/fbd208.png) `#fbd208`
+- ![#fbd208](https://placehold.co/32x32/fbd208/fbd208.png) `#fbd208 - Foreground`
