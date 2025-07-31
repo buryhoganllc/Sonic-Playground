@@ -6,15 +6,15 @@
 
 ### Attending
 
-- [ ] Name
-- [ ] Name
-- [ ] Name
+- Name
+- Name
+- Name
 
 ### Agenda Items
 
-- [ ] Item 1
-- [ ] Item 2
-- [ ] Item 3
+- Item 1
+- Item 2
+- Item 3
 
 ### Minutes
 
@@ -22,8 +22,8 @@
 
 ### Action Items
 
-- [ ] Task 1
-- [ ] Task 2
+- Task 1
+- Task 2
 
 ### References
 
