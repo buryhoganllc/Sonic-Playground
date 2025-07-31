@@ -1,4 +1,4 @@
-name: Copy Markdown Content
+name: Make Notes Doc
 
 on:
   workflow_dispatch:
