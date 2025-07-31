@@ -1,0 +1,51 @@
+name: Copy Markdown Content
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_file:
+        description: 'Path to the source Markdown file (relative to repo root)'
+        required: true
+        default: 'template/change-log.md'
+      destination_path:
+        description: 'Directory to create the new file in (relative to repo root)'
+        required: true
+        default: 'log'
+      destination_file:
+        description: 'New Markdown file name (including .md)'
+        required: true
+        default: 'change-log.md'
+
+jobs:
+  copy-md:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Ensure the target directory exists (only if missing)
+      - name: Ensure destination directory exists
+        run: |
+          if [ ! -d "${{ github.event.inputs.destination_path }}" ]; then
+            echo "Creating directory: ${{ github.event.inputs.destination_path }}"
+            mkdir -p "${{ github.event.inputs.destination_path }}"
+          else
+            echo "Directory already exists, skipping creation"
+          fi
+
+      # 3. Copy the Markdown content
+      - name: Copy Markdown file
+        run: |
+          cp "${{ github.event.inputs.source_file }}" \
+             "${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}"
+
+      # 4. Commit and push the new file if there are changes
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}"
+          git diff --cached --exit-code || \
+            (git commit -m "Copy ${{ github.event.inputs.source_file }} to ${{ github.event.inputs.destination_path }}/${{ github.event.inputs.destination_file }}" \
+             && git push)
