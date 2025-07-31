@@ -1,4 +1,4 @@
-name: Copy Markdown Content
+name: Make Change Log
 
 on:
   workflow_dispatch:
