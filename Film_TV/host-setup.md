@@ -7,8 +7,8 @@
 ## Intel NUC hosts
 
 #### POWER
-Disable Fast Start in Control Panel>Power Options  
-In BIOS, set S5 state power on schedule (XX:XXAM daily)  
+- Disable Fast Start in Control Panel>Power Options  
+- In BIOS, set `S5` state power on schedule (XX:XXAM daily)  
 
 #### LOGIN
 - "sp-show" user set for automatic login  
