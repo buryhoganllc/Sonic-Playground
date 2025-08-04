@@ -4,6 +4,8 @@
 --
 --	Copyright © 2025 Bury, Hogan & Associates LLC, All Rights Reserved
 --
+--  With support from Graham Miln, DSSW.
+--
 --  Create Power Manager event for repeat runs (hourly, etc.)
 
 use AppleScript version "2.4" -- Yosemite (10.10) or later
