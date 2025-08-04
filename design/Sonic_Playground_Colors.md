@@ -1,7 +1,8 @@
-# Sonic Playground Color Codes
+# Color Codes
 
-## GRAMMY Museum
+### Project: Sonic Playground
 
+### Client: GRAMMY Museum
 ---
 
 ### Primary Color Palette
