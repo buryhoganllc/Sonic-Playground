@@ -1,8 +1,9 @@
-# Color Codes - Electric Forest
+<!-- Run the 'Make Color Guide' action to use this template. A 'design' directory will be created if necessary.-->
+# Color Codes
 
-## Sonic Playground - GRAMMY Museum
+## Project: Sonic Playground - Electric Forest
 
----
+### Client: GRAMMY Museum
 
 ### Movements
 
