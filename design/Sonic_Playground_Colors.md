@@ -4,13 +4,13 @@
 
 ## Client: GRAMMY Museum
 
-### Primary Color Palette
+### Primary Color Palette - GLOBAL
 
 - ![#f9a13a](https://placehold.co/32x32/f9a13a/f9a13a.png) `#f9a13a`
 - ![#aed147](https://placehold.co/32x32/aed147/aed147.png) `#aed147`
 - ![#ed5671](https://placehold.co/32x32/ed5671/ed5671.png) `#ed5671`
 
-### Secondary Accents
+### Secondary Accents - GLOBAL
 
 - ![#f0a8a8](https://placehold.co/32x32/f0a8a8/f0a8a8.png) `#f0a8a8`
 - ![#ea6748](https://placehold.co/32x32/ea6748/ea6748.png) `#ea6748`
@@ -24,3 +24,15 @@
 - ![#292929](https://placehold.co/32x32/292929/292929.png) `#292929`
 - ![#e1dedd](https://placehold.co/32x32/e1dedd/e1dedd.png) `#e1dedd`
 - ![#ffffff](https://placehold.co/32x32/ffffff/ffffff.png) `#ffffff`
+
+### Movements - Electric Forest
+
+- ![#2913e1](https://placehold.co/32x32/2913e1/2913e1.png) `#2913e1 - Background`
+
+- ![#ed5671](https://placehold.co/32x32/ed5671/ed5671.png) `#ed5671 - Foreground`
+
+### Max Martin - Electric Forest
+
+- ![#ea5670](https://placehold.co/32x32/ea5670/ea5670.png) `#ea5670 - Background`
+
+- ![#fbd208](https://placehold.co/32x32/fbd208/fbd208.png) `#fbd208 - Foreground`
