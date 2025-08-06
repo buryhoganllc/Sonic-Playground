@@ -10,10 +10,10 @@ It is recommended that this guide be read in its entirety before changes are mad
 
 _Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
-- Max: ~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat
-- Ableton: ~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/MultShow File/ElectricForest_v200_MultiShow_v2.als
-- MadMapper: ~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/ElectricForest_MultiShow.mad
-- Automation scripts: ~/Desktop/ELECTRIC FOREST SHOW FILES/Automation (See Appendix B)
+- Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat`
+- Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/MultShow File/ElectricForest_v200_MultiShow_v2.als`
+- MadMapper: `~/Desktop/ELECTRIC FOREST SHOW FILES/MadMapper/ElectricForest_MultiShow.mad`
+- Automation scripts: `~/Desktop/ELECTRIC FOREST SHOW FILES/Automation` (See Appendix B)
 
 ### Standard Behavior  
 
@@ -96,17 +96,17 @@ To change between the Shaun Chasin and Max Martin music sets on-demand, select t
 
 ![Power Manager on-demand list from menu bar.](/images/PM_onDemand.png)  
 
-Selecting “_Ableton-Max Martin_” or “_Ableton-Shaun Chasin_” will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
+Selecting `“_Ableton-Max Martin_”` or `“_Ableton-Shaun Chasin_”` will fade out the currently playing audio, crossfade the lights to the new cue, and then begin playback of the selected song mix.  
 
-You may also change the surround output level on-demand by selecting either “_Ableton-Volume Daytime Mode_” (normal volume) or “_Ableton-Volume Nighttime Mode_” (dimmed output, approximately 10 dB lower.)  
+You may also change the surround output level on-demand by selecting either `“_Ableton-Volume Daytime Mode_”` (normal volume) or `“_Ableton-Volume Nighttime Mode_”` (dimmed output, approximately 10 dB lower.)  
 
 ### Overriding Scheduled Events  
 
 At times it may be necessary to manually trigger a music set/volume level keep it running beyond the point when the next programmed would occur (media days, special events, etc.)
 To override scheduled events, open Power Manager from the Dock (the purple alarm clock icon) and un-check the appropriate event.  
 
-For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select “Ableton-Max Martin” from the On Demand list (see above).  
-Next, uncheck the “_Shaun Chasin – Hourly_” entry in the Power Manager event store:  
+For example, to set the Martin mix on-demand and prevent scheduled scene transitions to the Chasin mix, first select `“Ableton-Max Martin”` from the On Demand list (see above).  
+Next, uncheck the `“_Shaun Chasin – Hourly_”` entry in the Power Manager event store:  
 
 ![Power Manager event store list all scheduled events.](/images/PM_eventStore.png)  
 
@@ -178,7 +178,7 @@ Conduct a full power cycle of the system:
   - 2 - ABLETON
   - 3 - MADMAPPER
 - __Allow each application to fully boot before moving on to the next one.__
-- Lastly, begin playback in Ableton by running one of the Power Manager events (“_Ableton-Shaun Chasin_” for example) to begin audio playback and set the tube lighting into the correct configuration.
+- Lastly, begin playback in Ableton by running one of the Power Manager events (`“_Ableton-Shaun Chasin_”` for example) to begin audio playback and set the tube lighting into the correct configuration.
 
 ### One or more loudspeakers do not appear to be working  
 
