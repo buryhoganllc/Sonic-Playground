@@ -1,7 +1,7 @@
 <!-- Run the 'Make Notes Doc' action to use this template. A 'notes' directory will be created if necessary.-->
-# Project: [NAME]
+# Project: Sonic Playground
 
-## Client: [NAME]
+## Client: GRAMMY Museum
 
 ### Date: [DATE] [TIME], [LOCATION]
 
