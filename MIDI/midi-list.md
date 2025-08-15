@@ -9,8 +9,8 @@
 
 #### Track Volume Control (Ableton)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- |
+| Chan | Evemt      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 01   | CC         | 01     | var    | from max 1       | 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      |
 | 01   | CC         | 01     | var    | from max 1       | Sampler 1         | Track Volume        | -60 dB     | 0 dB      |
 | 01   | CC         | 02     | var    | from max 1       | 02-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      |
@@ -88,3 +88,4 @@
 | 05   | CC         | 01     | 127    | IAC Driver Bus 1 | Scene 1 (Fade Out)|                     |            |           |
 | 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)  |                     |            |           |
 | 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)  |                     |            |           |
+
