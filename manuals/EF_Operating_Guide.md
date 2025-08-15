@@ -8,7 +8,7 @@ It is recommended that this guide be read in its entirety before changes are mad
 
 ### Component Files  
 
-_Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
+_Electric Forest_ utilizes Max, Ableton, and MadMapper show files to host the sensor controls, audio playback, and LED behavior, respectively. _Electric Forest_ runs on macOS systems. Show files exist in the “ELECTRIC FOREST SHOW FILES” folder on the Desktop.  
 
 - Max: `~/Desktop/ELECTRIC FOREST SHOW FILES/Max/ElectricForest_VINT_v6_ratioTEST-InactTEST-vSC_012025v2.maxpat`
 - Ableton: `~/Desktop/ELECTRIC FOREST SHOW FILES/Ableton/MultShow File/ElectricForest_v200_MultiShow_v2.als`
