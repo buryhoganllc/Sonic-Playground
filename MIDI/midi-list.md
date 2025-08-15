@@ -46,8 +46,8 @@
 
 #### Lighting Control (MadMapper)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 02   | CC         | 01     | var    | IAC Driver Bus 1 |                   | Tube 01 color width | 0          | 127       |
 | 02   | CC         | 02     | var    | IAC Driver Bus 1 |                   | Tube 02 color width | 0          | 127       |
 | 02   | CC         | 03     | var    | IAC Driver Bus 1 |                   | Tube 03 color width | 0          | 127       |
@@ -67,8 +67,8 @@
 
 #### Transport/Output Control (Ableton)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           |
 | 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   |
@@ -76,16 +76,17 @@
 
 #### Cue Control (MadMapper)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 04   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 01 (Chasin) |                     | 0          | 127       |
 | 04   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 02 (Martin) |                     | 0          | 127       |
 
 #### Scene Control (Ableton)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   |
-| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- |
+| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 05   | CC         | 01     | 127    | IAC Driver Bus 1 | Scene 1 (Fade Out)|                     |            |           |
 | 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)  |                     |            |           |
 | 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)  |                     |            |           |
+
 
