@@ -7,9 +7,9 @@
 
 ### Interactive: Electric Forest
 
-#### Track Volume Control (Ableton)
+#### Track Volume Control (Audio Host)
 
-| Chan | Evemt      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 01   | CC         | 01     | var    | from max 1       | 01-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      |
 | 01   | CC         | 01     | var    | from max 1       | Sampler 1         | Track Volume        | -60 dB     | 0 dB      |
@@ -44,9 +44,9 @@
 | 01   | CC         | 16     | var    | from max 1       | 16-Audio \| Mixer | Track Volume        | -60 dB     | 0 dB      |
 | 01   | CC         | 16     | var    | from max 1       | Sampler 16        | Track Volume        | -60 dB     | 0 dB      |
 
-#### Lighting Control (MadMapper)
+#### Lighting Control (Pixel Mapping)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 02   | CC         | 01     | var    | IAC Driver Bus 1 |                   | Tube 01 color width | 0          | 127       |
 | 02   | CC         | 02     | var    | IAC Driver Bus 1 |                   | Tube 02 color width | 0          | 127       |
@@ -65,28 +65,29 @@
 | 02   | CC         | 15     | var    | IAC Driver Bus 1 |                   | Tube 15 color width | 0          | 127       |
 | 02   | CC         | 16     | var    | IAC Driver Bus 1 |                   | Tube 16 color width | 0          | 127       |
 
-#### Transport/Output Control (Ableton)
+#### Transport/Output Control (Audio Host)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 03   | CC         | 01     | 127    | IAC Driver Bus 1 | Transport         | Start               |            |           |
 | 03   | CC         | 02     | 127    | IAC Driver Bus 1 | Transport         | Stop                |            |           |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | A-North \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   |
 | 03   | CC         | 20     | 127    | IAC Driver Bus 1 | B-South \| Mixer  | Track Volume        | -40 dB     | -2.5 dB   |
 
-#### Cue Control (MadMapper)
+#### Cue Control (Pixel Mapping)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 04   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 01 (Chasin) |                     | 0          | 127       |
 | 04   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 02 (Martin) |                     | 0          | 127       |
 
-#### Scene Control (Ableton)
+#### Scene Control (Audio Host)
 
-| Chan | Message    | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
+| Chan | Event      | Byte 1 | Byte 2 | Device           | Path              | Name                | Min Val    | Max Val   | Comments                        |
 | ---- | ---------- | ------ | ------ | ---------------- | ----------------- | ------------------- | ---------- | --------- | ------------------------------- |
 | 05   | CC         | 01     | 127    | IAC Driver Bus 1 | Scene 1 (Fade Out)|                     |            |           |
 | 05   | CC         | 03     | 127    | IAC Driver Bus 1 | Scene 3 (Chasin)  |                     |            |           |
 | 05   | CC         | 04     | 127    | IAC Driver Bus 1 | Scene 4 (Martin)  |                     |            |           |
+
 
 
